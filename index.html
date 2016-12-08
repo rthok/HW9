@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<!--
+    Author : Ravy Thok                                      
+    Email : ravy_thok@student.uml.edu                             
+    School : UMass Lowell                                        
+    Course : COMP 4610 - GUI Programming I                       
+    Assignment :  No.9: Implementing a Bit of Scrabble with Drag-and-Drop    
+    Filename: index.html                               
+-->
+<html lang="en">
+    
+    <head>
+        <!-- Link javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+        
+        <title>SCRABBLE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link css stylesheet -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id = "container">
+            <h2>Let's Play Scrabble!!</h2>
+            
+            <!-- This div "menu" will display the user's score and word-->
+            <div id="Menu">
+                <h3>Scoreboard:</h3>
+                <div>Word Score:</div>
+                <div id="wordScore"></div>
+                <div>Total Score:</div>
+                <div id="totalScore"></div>
+            </div>
+            
+            <!-- This div "Broad" creates a row of the Scrabble board game
+            where user can drag and drop tiles -->
+            <div id="Board">
+                <h3>Your Board:</h3>
+                <table>
+                    <tr>
+                        <td><img id = "boardspace1" class = "boardspace" src="boardTW.jpg" title="tripleword"></td>
+                        <td><img id = "boardspace2" class = "boardspace" src="boardREG.jpg" title="regular"></td>
+                        <td><img id = "boardspace3" class = "boardspace" src="boardDL.jpg" title="doubleletter"></td>
+                        <td><img id = "boardspace4" class = "boardspace" src="boardREG.jpg" title="regular"></td>
+                        <td><img id = "boardspace5" class = "boardspace" src="boardSTAR.jpg" title="regular"></td>
+                        <td><img id = "boardspace6" class = "boardspace" src="boardREG.jpg" title="regular"></td>
+                        <td><img id = "boardspace7" class = "boardspace" src="boardDL.jpg" title="doubleletter"></td>
+                        <td><img id = "boardspace8" class = "boardspace" src="boardREG.jpg" title="regular"></td>
+                        <td><img id = "boardspace9" class = "boardspace" src="boardTW.jpg" title="tripleword"></td>
+                    </tr>
+                </table>
+                
+                <button onclick="buildRack()" id="submit_wordButton">Submit Word</button>
+                <button onclick="reset()" id="reset_gameButton">Reset Game</button>
+            </div>
+            
+            <!-- This div "Letter" is where the player's letter are being 
+            displayed and can drag the letters -->
+            <!-- http://www.westfieldcommunityplayers.org/images/scrabble_tile_holder.jpg -->
+            <div id="Letters">
+                <h3>Your Letters:</h3>
+                <img id="letterholder" src="letter-holder.png" title="letterholder">
+                <div id="player_LettersHolder"></div>
+            </div>
+        </div>
+        <footer>
+        <script src="myjavascript.js"></script>
+        </footer>
+    </body>
+    
+        
+</html>
